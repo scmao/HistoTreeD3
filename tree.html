@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<title>HistoTree</title>
+<style type="text/css">
+.node, .clickable {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #9ACD32;
+  stroke:  #556B2F;
+  stroke-width: 2px;
+}
+
+.node text {
+  font: 16px sans-serif;
+  fill: #217dda;
+}
+
+.link {
+  fill: none;
+  stroke: #754917;
+  stroke-width: 2px;
+  opacity: .3;
+}
+
+#logo {
+position: fixed;
+bottom: 0px;
+right: 0px;
+}
+#pic {
+  position: relative;
+  float: left;
+  height: 32px;
+  width: 32px;
+}
+#picR {
+  position: relative;
+  float: right;
+  height: 32px;
+  width: 32px;
+}
+/*MORPH*/
+#pic img {
+  position: absolute;
+  -webkit-transition: opacity 0.2s ease-in-out;
+     -moz-transition: opacity 0.2s ease-in-out;
+       -o-transition: opacity 0.2s ease-in-out;
+      -ms-transition: opacity 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
+}
+#picR img {
+  position: absolute;
+  -webkit-transition: opacity 0.2s ease-in-out;
+     -moz-transition: opacity 0.2s ease-in-out;
+       -o-transition: opacity 0.2s ease-in-out;
+      -ms-transition: opacity 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
+} 
+#pic img.bottom:hover {
+	opacity: 0;
+}
+#picR img.bottom:hover {
+	opacity: 0;
+}
+body{
+   background-image : url("images/logoClear.png"), url("texture-noise.jpg");
+/*	background-size:8%;
+   background-position: right bottom; /*Positioning*/*/
+   /*Prevent showing multiple background images*/
+    background-size:  8%%;
+   background-position: bottom right, left;
+   background-size:  8%%;
+   background-repeat: no-repeat, repeat;
+}
+
+</style>
+<body>
+<div id = "multi_bg">
+<div id = "pic">
+<img class = "top" src="images/Back_Arrow_Color.png" width="32" height="32"/>
+<img class = "bottom" src="images/Back_Arrow.png" width ="32" height = "32"/>
+</div>
+<div id ="picR">
+<img class = "top" src="images/Forward_Arrow_Color.png" width="32" height="32"/>
+<img class = "bottom" src="images/Forward_Arrow.png" width ="32" height = "32"/>
+</div>
+</div>
+</body>
+<script src="d3.v3.min.js"></script>
+<script src="tree.js"></script>
+</html>
