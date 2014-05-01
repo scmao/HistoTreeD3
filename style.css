@@ -1,6 +1,7 @@
-.multi_bg{
+/*.multi_bg{
    background-image: url("images/logoClear.png");
 	background-size:8%;
-   background-position: right bottom; /*Positioning*/
-   background-repeat: no-repeat; /*Prevent showing multiple background images*/
+   background-position: right bottom; /*Positioning
+   /*background-repeat: no-repeat;*/ /*Prevent showing multiple background images
 }
+*/
